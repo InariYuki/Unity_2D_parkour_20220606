@@ -18,9 +18,10 @@ namespace KitsuneYuki
         #endregion
 
         #region ¤èªk
-        private void Start()
+        private void Awake()
         {
-            print("Hello");
+            anim_ctl = GetComponent<Animator>();
+            body_ctl = GetComponent<Rigidbody2D>();
         }
         #endregion
     }
