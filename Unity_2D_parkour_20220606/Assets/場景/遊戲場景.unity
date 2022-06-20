@@ -10017,6 +10017,7 @@ GameObject:
   - component: {fileID: 488736658}
   - component: {fileID: 488736657}
   - component: {fileID: 488736659}
+  - component: {fileID: 488736660}
   m_Layer: 0
   m_Name: "\u5FCD\u8005\u86D9"
   m_TagString: Untagged
@@ -10162,6 +10163,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   run_speed: 3.5
   jump_height: 350
+--- !u!114 &488736660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488736653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dfaa9a316f0a7344b307a3dc093d78e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1000114962
 GameObject:
   m_ObjectHideFlags: 0
@@ -10179,7 +10192,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1000114963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10220,6 +10233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ninja_frog: {fileID: 488736653}
+  start_point: {fileID: 1545908374}
 --- !u!1 &1333538536
 GameObject:
   m_ObjectHideFlags: 0
