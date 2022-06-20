@@ -16,9 +16,13 @@ namespace KitsuneYuki
             print(cam.depth);
             print(scol.radius);
             capsule.localScale = new Vector3(3 , 2 , 1);
-            //cam.backgroundColor = ?
+            Color color = new Color();
+            color.r = Random.Range(0f , 1f);
+            color.g = Random.Range(0f , 1f);
+            color.b = Random.Range(0f , 1f);
+            cam.backgroundColor = color;
 
-            /*print("²{¦bª¬ºA" + ninja_frog.activeInHierarchy);
+            /*print("ï¿½{ï¿½bï¿½ï¿½ï¿½A" + ninja_frog.activeInHierarchy);
             ninja_frog.tag = "Player";
             ninja_frog.layer = 4;
             ninja_frog.SetActive(false);
