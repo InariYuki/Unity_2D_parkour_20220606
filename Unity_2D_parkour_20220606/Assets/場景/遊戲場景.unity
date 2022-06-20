@@ -10172,6 +10172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1000114964}
   - component: {fileID: 1000114963}
+  - component: {fileID: 1000114965}
   m_Layer: 0
   m_Name: TestSTAPI
   m_TagString: Untagged
@@ -10186,7 +10187,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000114962}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 757eb4cb22cdd384685591d4df76033a, type: 3}
   m_Name: 
@@ -10199,13 +10200,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000114962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.35607055, y: 4.3552155, z: -0.41337144}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1000114965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000114962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8415e6f341ed2a46aadf6adfdf5f13a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ninja_frog: {fileID: 488736653}
 --- !u!1 &1333538536
 GameObject:
   m_ObjectHideFlags: 0
