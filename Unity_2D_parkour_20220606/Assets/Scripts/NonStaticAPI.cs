@@ -10,7 +10,12 @@ namespace KitsuneYuki
         Transform start_point;*/
         [SerializeField] Camera cam;
         [SerializeField] SphereCollider scol;
-        [SerializeField] Transform capsule;
+        [SerializeField] Transform capsule , cube;
+        Rigidbody capsule_body;
+        private void Awake()
+        {
+            capsule_body = capsule.GetComponent<Rigidbody>();
+        }
         private void Start()
         {
             print(cam.depth);
@@ -31,6 +36,8 @@ namespace KitsuneYuki
         }
         private void Update()
         {
+            cube.RotateAround(scol.gameObject.transform.position , Vector3.forward , 200 * Time.deltaTime);
+            capsule_body.AddForce(Vector2.up * 1000 * Time.deltaTime);
             /*start_point.Translate(1f , 0 , 0);
             start_point.Rotate(0 , 0 , 3.5f);*/
         }
