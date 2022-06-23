@@ -12,12 +12,13 @@ namespace KitsuneYuki
         private float run_speed = 3.5f;
         private Animator anim_ctl;
         private Rigidbody2D body_ctl;
+        Vector2 direction , velocity;
         #endregion
 
         #region ½ÆÂø¥\¯à
         void run()
         {
-            body_ctl.velocity = new Vector2(run_speed , body_ctl.velocity.y);
+            direction = new Vector2(Input.GetAxisRaw("Horizontal") , 0);
         }
         #endregion
 
@@ -30,6 +31,11 @@ namespace KitsuneYuki
         private void Update()
         {
             run();
+        }
+        private void FixedUpdate()
+        {
+            velocity = Vector2.Lerp(velocity, direction * run_speed, 0.2f);
+            body_ctl.velocity = new Vector2(velocity.x , body_ctl.velocity.y);
         }
         #endregion
     }

@@ -10161,8 +10161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac7b66911bb7cf45a1924a7f1145b56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  run_speed: 3.5
-  jump_height: 350
+  run_speed: 5
 --- !u!114 &488736660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10175,6 +10174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dfaa9a316f0a7344b307a3dc093d78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jump_height: 350
 --- !u!1 &1000114962
 GameObject:
   m_ObjectHideFlags: 0
@@ -10232,8 +10232,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8415e6f341ed2a46aadf6adfdf5f13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ninja_frog: {fileID: 488736653}
-  start_point: {fileID: 1545908374}
+  cam: {fileID: 0}
+  scol: {fileID: 0}
+  capsule: {fileID: 0}
+  cube: {fileID: 0}
 --- !u!1 &1333538536
 GameObject:
   m_ObjectHideFlags: 0
