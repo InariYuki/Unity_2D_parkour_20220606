@@ -9,9 +9,14 @@ namespace KitsuneYuki
         [SerializeField] CanvasGroup canvas;
         [SerializeField] TextMeshProUGUI summary_title;
         [HideInInspector] public string string_title;
+        Timer timer;
+        private void Awake()
+        {
+            timer = GetComponent<Timer>();
+        }
         private void Start()
         {
-            summary_title.text = string_title;
+            summary_title.text = string_title + " " + timer.time_elapsed.ToString("0.00") + "¬í";
             InvokeRepeating("fade_in" , 0 , 1f/60f);
         }
         void fade_in()

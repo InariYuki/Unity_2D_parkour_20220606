@@ -15,6 +15,9 @@ namespace KitsuneYuki
         [SerializeField] Vector3 detect_floor_offset;
         [SerializeField] Color detect_floor_color = new Color(1f, 0, 0.2f, 0.5f);
         [SerializeField] LayerMask detect_floot_layer;
+        [SerializeField] AudioClip jump_fx;
+        string jump_string = "is_jumping";
+        AudioSource audio_source;
         #endregion
 
         #region ¤èªk
@@ -27,6 +30,7 @@ namespace KitsuneYuki
         {
             anim_ctl = GetComponent<Animator>();
             body_ctl = GetComponent<Rigidbody2D>();
+            audio_source = GetComponent<AudioSource>();
         }
         private void Update()
         {
@@ -36,6 +40,7 @@ namespace KitsuneYuki
         {
             jump();
             check_ground();
+            animation_ctl();
         }
         #endregion
 
@@ -57,12 +62,17 @@ namespace KitsuneYuki
             {
                 body_ctl.AddForce(new Vector2(0 , jump_height));
                 is_jumping = false;
+                audio_source.PlayOneShot(jump_fx, 1f);
             }
         }
         void check_ground()
         {
             Collider2D hit = Physics2D.OverlapBox(transform.position + detect_floor_offset, detect_floor , 0 , detect_floot_layer);
             can_jump = hit;
+        }
+        void animation_ctl()
+        {
+            anim_ctl.SetBool(jump_string , !can_jump);
         }
         #endregion
     }
